@@ -42,11 +42,14 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
     const decodedToken = jwt_decode(token);
     const userId = decodedToken.id;
 
-    fetch(`http://127.0.0.1:5001/api/diaryblog_space/user/${userId}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch(
+      `https://diaryblogapi.onrender.com/api/diaryblog_space/user/${userId}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -77,7 +80,7 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
         }));
 
         const response = await fetch(
-          `http://127.0.0.1:5001/api/follow_spaces`,
+          `https://diaryblogapi.onrender.com/api/follow_spaces`,
           {
             method: "POST",
             headers: {
