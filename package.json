@@ -2,7 +2,7 @@
   "name": "followadminui",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=3032 npx serve",
     "start": "webpack serve --open --mode development",
@@ -34,6 +34,8 @@
     "@babel/runtime": "^7.13.10",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.14.3",
