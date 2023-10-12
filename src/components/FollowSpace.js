@@ -80,7 +80,7 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
         }));
 
         const response = await fetch(
-          `https://diaryblogapi.onrender.com/api/follow_spaces`,
+          `https://diaryblogapi2.onrender.com/api/follow_spaces`,
           {
             method: "POST",
             headers: {
