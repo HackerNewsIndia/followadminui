@@ -43,7 +43,7 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
     const userId = decodedToken.id;
 
     fetch(
-      `https://diaryblogapi.onrender.com/api/diaryblog_space/user/${userId}`,
+      `https://diaryblogapi2.onrender.com/api/diaryblog_space/user/${userId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
