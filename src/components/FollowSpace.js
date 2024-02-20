@@ -44,7 +44,7 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
     const userId = user.id;
 
     fetch(
-      `https://diaryblogapi.onrender.com/api/diaryblog_space/user/${userId}`,
+      `https://diaryblogapi2.onrender.com/api/diaryblog_space/user/${userId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
         }));
 
         const response = await fetch(
-          `https://diaryblogapi.onrender.com/api/follow_spaces`,
+          `https://diaryblogapi2.onrender.com/api/follow_spaces`,
           {
             method: "POST",
             headers: {
