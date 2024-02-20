@@ -40,7 +40,8 @@ function FollowSpace({ isLoggedIn, setIsLoggedIn, selectedKey }) {
 
     // Decode the JWT token to get the user_id
     const decodedToken = jwt_decode(token);
-    const userId = decodedToken.id;
+    const user = decodedToken.user;
+    const userId = user.id;
 
     fetch(
       `https://diaryblogapi.onrender.com/api/diaryblog_space/user/${userId}`,
